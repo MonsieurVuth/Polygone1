@@ -1,0 +1,14 @@
+D:\Users\Vuth\source\repos\Polygone1\Polygone1\obj\Debug\MainWindow.g.cs
+D:\Users\Vuth\source\repos\Polygone1\Polygone1\obj\Debug\App.g.cs
+D:\Users\Vuth\source\repos\Polygone1\Polygone1\obj\Debug\Polygone1_MarkupCompile.cache
+D:\Users\Vuth\source\repos\Polygone1\Polygone1\obj\Debug\Polygone1_MarkupCompile.lref
+D:\Users\Vuth\source\repos\Polygone1\Polygone1\bin\Debug\Polygone1.exe.config
+D:\Users\Vuth\source\repos\Polygone1\Polygone1\bin\Debug\Polygone1.exe
+D:\Users\Vuth\source\repos\Polygone1\Polygone1\bin\Debug\Polygone1.pdb
+D:\Users\Vuth\source\repos\Polygone1\Polygone1\obj\Debug\MainWindow.baml
+D:\Users\Vuth\source\repos\Polygone1\Polygone1\obj\Debug\Polygone1.g.resources
+D:\Users\Vuth\source\repos\Polygone1\Polygone1\obj\Debug\Polygone1.Properties.Resources.resources
+D:\Users\Vuth\source\repos\Polygone1\Polygone1\obj\Debug\Polygone1.csproj.GenerateResource.cache
+D:\Users\Vuth\source\repos\Polygone1\Polygone1\obj\Debug\Polygone1.csproj.CoreCompileInputs.cache
+D:\Users\Vuth\source\repos\Polygone1\Polygone1\obj\Debug\Polygone1.exe
+D:\Users\Vuth\source\repos\Polygone1\Polygone1\obj\Debug\Polygone1.pdb
