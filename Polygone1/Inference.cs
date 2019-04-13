@@ -25,5 +25,12 @@ namespace Polygone1
         public string Angle { get => angle; set => angle = value; }
         public string Para { get => para; set => para = value; }
         public string Longueur { get => longueur; set => longueur = value; }
+
+        public void gettest()
+        {
+            BaseFait bf = new BaseFait(this);
+            bf.getShape();
+        }
     }
+
 }

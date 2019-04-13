@@ -12,3 +12,4 @@ D:\Users\Vuth\source\repos\Polygone1\Polygone1\obj\Debug\Polygone1.csproj.Genera
 D:\Users\Vuth\source\repos\Polygone1\Polygone1\obj\Debug\Polygone1.csproj.CoreCompileInputs.cache
 D:\Users\Vuth\source\repos\Polygone1\Polygone1\obj\Debug\Polygone1.exe
 D:\Users\Vuth\source\repos\Polygone1\Polygone1\obj\Debug\Polygone1.pdb
+D:\Users\Vuth\source\repos\Polygone1\Polygone1\obj\Debug\Polygone1.csprojResolveAssemblyReference.cache

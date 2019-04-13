@@ -27,14 +27,8 @@ namespace Polygone1
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            if (side.Text != string.Empty && angle.Text != string.Empty && para.Text != string.Empty && longueur.Text != string.Empty)
-            {
-                Shape form = new Shape(side.Text, angle.Text, para.Text, longueur.Text);
-                form.TriangleQuelconque();               
-            }else
-            {
-                MessageBox.Show("veuillez saisir des valeurs");
-            }
+            Inference inference = new Inference("2", "2", "2", "2");
+            inference.gettest();
         }
     }
 }
