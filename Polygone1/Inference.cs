@@ -29,7 +29,7 @@ namespace Polygone1
         public void gettest()
         {
             BaseFait bf = new BaseFait(this);
-            bf.getShape();
+            bf.AddShape("Polygone");
         }
     }
 
