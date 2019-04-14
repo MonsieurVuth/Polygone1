@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace Polygone1
 {
@@ -26,10 +27,10 @@ namespace Polygone1
         public string Para { get => para; set => para = value; }
         public string Longueur { get => longueur; set => longueur = value; }
 
-        public void gettest()
+        public void CheckRegles()
         {
-            BaseFait bf = new BaseFait(this);
-            bf.AddShape("Polygone");
+            Shape forme = new Shape(this);
+            MessageBox.Show(forme.Triangle());
         }
     }
 
