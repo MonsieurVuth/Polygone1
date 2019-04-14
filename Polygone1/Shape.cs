@@ -18,7 +18,7 @@ namespace Polygone1
 
         public String Triangle()
         {
-            if (this.inference.Cote == "3" && this.inference.Para == "0"){
+            if ( this.inference.Para == "0"){
                 this.forme = "Triangle";
                 if(this.inference.Angle == "1")
                 {
@@ -32,7 +32,7 @@ namespace Polygone1
                         forme += " isocèle";
                     }
                     else
-                    {
+                    {                   
                         try
                         {
                             int result = Int32.Parse(this.inference.Longueur);
@@ -43,7 +43,18 @@ namespace Polygone1
                             }
                             else
                             {
-                                forme += " equilatéral";
+                                if (this.inference.Longueur == "0" && this.inference.Angle == "0")
+                                {
+                                    forme += " quelconque";
+
+                                }
+                                else
+                                {
+                                    if(this.inference.Longueur == "3")
+                                    {
+                                        forme += " equilatéral";
+                                    }        
+                                }        
                             }                        
                         }
                         catch (FormatException)
@@ -58,7 +69,30 @@ namespace Polygone1
         public string FourSide()
         {
             string forme = String.Empty;
-            return forme;
+
+                if(inference.Longueur == "4" && inference.Para == "4" && inference.Angle == "4")
+                {
+                    forme += " Carré";
+                }
+
+                if(inference.Longueur== "2" && inference.Para == "4" && inference.Angle == "4")
+                {
+                    forme += " Rectange";
+                }
+
+                if (inference.Longueur == "4" && inference.Para == "4" && inference.Angle == "0")
+                {
+                    forme += " Losange";
+                }
+                if(this.inference.Longueur == "2" && this.inference.Para == "2" && this.inference.Angle == "0")
+                {
+                    forme += " Trapèze";
+                }
+                if(this.inference.Longueur == "4" && this.inference.Para == "4" && this.inference.Angle == "0")
+                {
+                    forme += " Parallèlogramme";
+                }
+                return forme;
         }
     }
 }

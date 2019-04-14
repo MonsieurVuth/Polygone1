@@ -27,7 +27,9 @@
             <ComboBoxItem Content="4"/>
         </ComboBox>
         <ComboBox x:Name="longueur" HorizontalAlignment="Left" Margin="343,132,0,0" VerticalAlignment="Top" Width="120">
+            <ListBoxItem Content="0"/>
             <ComboBoxItem Content="2"/>
+            <ListBoxItem Content="3"/>
             <ComboBoxItem Content="4"/>
         </ComboBox>
         <Button Content="VALIDER" HorizontalAlignment="Left" Margin="323,196,0,0" VerticalAlignment="Top" FontSize="15" Width="140" Height="41" Click="Button_Click"/>
