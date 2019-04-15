@@ -50,11 +50,19 @@ namespace Polygone1
             {
                 if(labase.getShape() == string.Empty)
                 {
-                      labase.AddShape(forme.FourSide());
+                    if(forme.FourSide() != null)
+                    {
+                        labase.AddShape(forme.FourSide());
+                    }
+                    else
+                    {
+                        MessageBox.Show("Erreur de paramètre");
+                    }         
                 }
                 else
                 {
-                    MessageBox.Show(labase.getShape());                }
+                    MessageBox.Show(labase.getShape());
+                }
             }
         }
     }

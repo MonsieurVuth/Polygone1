@@ -19,6 +19,8 @@
         <ComboBox x:Name="angle" HorizontalAlignment="Left" Margin="343,69,0,0" VerticalAlignment="Top" Width="120">
             <ComboBoxItem Content="0"/>
             <ComboBoxItem Content="1"/>
+            <ComboBoxItem Content="2"/>
+            <ComboBoxItem Content="3"/>
             <ComboBoxItem Content="4"/>
         </ComboBox>
         <ComboBox x:Name="para" HorizontalAlignment="Left" Margin="343,102,0,0" VerticalAlignment="Top" Width="120">
@@ -27,9 +29,9 @@
             <ComboBoxItem Content="4"/>
         </ComboBox>
         <ComboBox x:Name="longueur" HorizontalAlignment="Left" Margin="343,132,0,0" VerticalAlignment="Top" Width="120">
-            <ListBoxItem Content="0"/>
+            <ComboBoxItem Content="0"/>
             <ComboBoxItem Content="2"/>
-            <ListBoxItem Content="3"/>
+            <ComboBoxItem Content="3"/>
             <ComboBoxItem Content="4"/>
         </ComboBox>
         <Button Content="VALIDER" HorizontalAlignment="Left" Margin="323,196,0,0" VerticalAlignment="Top" FontSize="15" Width="140" Height="41" Click="Button_Click"/>

@@ -65,43 +65,48 @@ namespace Polygone1
             }
             else
             {
-                MessageBox.Show("Erreur de paramètre");
+                MessageBox.Show("Impossible d'avoir des cotés parralèle");
                 return null;
             }
             return forme;
         }
         public string FourSide()
         {
-            string forme = String.Empty;
-                if (inference.Longueur == "4" && inference.Para == "4" && inference.Angle == "4")
-                {
-                    forme += " Carré";
-                }
 
-                if (inference.Longueur == "2" && inference.Para == "4" && inference.Angle == "4")
-                {
-                    forme += " Rectange";
-                }
+                    if (inference.Para == "4" && inference.Angle == "4")
+                    {
+                        if (this.inference.Longueur == "4")
+                        {
+                            forme += " Carré";
+                        }
+                        else
+                        {
+                            if (inference.Longueur == "2")
+                            {
+                                forme += " Rectange";
+                            }
+                        }
 
-                if (inference.Longueur == "4" && inference.Para == "4" && inference.Angle == "0")
-                {
-                    forme += " Losange";
-                }
-                if ( this.inference.Para == "2" && this.inference.Angle == "0")
-                {
-                    forme += " Trapèze";
-                }
-                else
-                {
-                if (this.inference.Para == "0")
-                {
-                    forme += "Quadrilatère quelconque";
-                }
-                }
-                if (this.inference.Longueur == "4" && this.inference.Para == "4" && this.inference.Angle == "0")
-                {
-                    forme += " Parallèlogramme";
-                }              
+                    }
+                    else
+                    {
+                        if (this.inference.Angle == "0")
+                        {
+                            forme += "Quadrilatère quelconque";
+                            if (this.inference.Longueur == "4" && this.inference.Para == "4")
+                            {
+                                forme += " Parallèlogramme";
+                            }
+                            if (this.inference.Para == "2")
+                            {
+                                forme += " Trapèze";
+                            }
+                            if (inference.Longueur == "4" && inference.Para == "4")
+                            {
+                                forme += " Losange";
+                            }
+                        }
+                    }            
             return forme;
         }
     }
