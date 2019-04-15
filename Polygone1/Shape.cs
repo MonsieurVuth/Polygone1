@@ -18,14 +18,20 @@ namespace Polygone1
 
         public String Triangle()
         {
-            if ( this.inference.Para == "0"){
-                this.forme = "Triangle";
+            if ( this.inference.Para == "0" )
+            {
+                this.forme = " Triangle";
                 if(this.inference.Angle == "1")
                 {
                     forme += " rectangle";
                 }
                 else
                 {
+                    if(Int32.Parse(this.inference.Angle) > 1)
+                    {
+                        MessageBox.Show("Impossible d'avoir plus q'un angle droit");
+                        return null;
+                    }
                     if (this.inference.Longueur == "2")
                     {
                         this.forme = " Triangle";
@@ -33,12 +39,10 @@ namespace Polygone1
                     }
                     else
                     {                   
-                        try
-                        {
                             int result = Int32.Parse(this.inference.Longueur);
-                            if (result > 3)
+                            if (result > Int32.Parse(this.inference.Cote))
                             {
-                                MessageBox.Show("Forme introuvable, vérifiez les paramètres");
+                                MessageBox.Show("Impossible d'avoir plus de trois longueurs identiques");
                                 return null;
                             }
                             else
@@ -50,19 +54,19 @@ namespace Polygone1
                                 }
                                 else
                                 {
-                                    if(this.inference.Longueur == "3")
+                                    if(this.inference.Longueur == "3" && this.inference.Angle == "0")
                                     {
                                         forme += " equilatéral";
                                     }        
                                 }        
                             }                        
-                        }
-                        catch (FormatException)
-                        {
-                            MessageBox.Show("Problème de parse");
-                        }
                     }
                 }
+            }
+            else
+            {
+                MessageBox.Show("Erreur de paramètre");
+                return null;
             }
             return forme;
         }
@@ -83,18 +87,21 @@ namespace Polygone1
                 {
                     forme += " Losange";
                 }
-                if (this.inference.Longueur == "2" && this.inference.Para == "2" && this.inference.Angle == "0")
+                if ( this.inference.Para == "2" && this.inference.Angle == "0")
                 {
                     forme += " Trapèze";
+                }
+                else
+                {
+                if (this.inference.Para == "0")
+                {
+                    forme += "Quadrilatère quelconque";
+                }
                 }
                 if (this.inference.Longueur == "4" && this.inference.Para == "4" && this.inference.Angle == "0")
                 {
                     forme += " Parallèlogramme";
-                }
-                if (this.inference.Para == "0")
-                {
-                forme += "Quadrilatère quelconque";
-                }
+                }              
             return forme;
         }
     }

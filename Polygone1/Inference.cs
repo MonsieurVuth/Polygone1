@@ -22,9 +22,9 @@ namespace Polygone1
             this.Longueur = longe;
         }
 
-        public string Cote { get => cote; set => cote = value; }
+        public string Cote { get => cote; set => cote = value; }        public string Para { get => para; set => para = value; }
+
         public string Angle { get => angle; set => angle = value; }
-        public string Para { get => para; set => para = value; }
         public string Longueur { get => longueur; set => longueur = value; }
 
         public void CheckRegles()
@@ -35,7 +35,10 @@ namespace Polygone1
             {
                 if(labase.getShape() == string.Empty)
                 {
-                    labase.AddShape(forme.Triangle());
+                    if(forme.Triangle() != null)
+                    {
+                        labase.AddShape(forme.Triangle());
+                    }              
                 }
                 else
                 {
@@ -47,7 +50,7 @@ namespace Polygone1
             {
                 if(labase.getShape() == string.Empty)
                 {
-                    labase.AddShape(forme.FourSide());
+                      labase.AddShape(forme.FourSide());
                 }
                 else
                 {

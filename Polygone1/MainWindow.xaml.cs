@@ -24,7 +24,6 @@ namespace Polygone1
         {
             InitializeComponent();
         }
-
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             Inference inference = new Inference(side.Text, angle.Text, para.Text, longueur.Text);
