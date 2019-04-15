@@ -45,7 +45,13 @@ namespace Polygone1
 
             if(this.cote == "4")
             {
-                MessageBox.Show(forme.FourSide());
+                if(labase.getShape() == string.Empty)
+                {
+                    labase.AddShape(forme.FourSide());
+                }
+                else
+                {
+                    MessageBox.Show(labase.getShape());                }
             }
         }
     }
