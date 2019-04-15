@@ -44,21 +44,17 @@ namespace Polygone1
             MessageBox.Show("Nouvelle forme insérée");
         }
 
-        public void getShape()
+        public bool getShape()
         {
             InitConnect();
             this.connection.Open();
-            String query = "SELECT * FROM caracteristiques ";
+            String query = "SELECT * FROM caracteristiques";
             MySqlCommand command = new MySqlCommand(query, this.connection);
             
             using (MySqlDataReader reader = command.ExecuteReader())
             {
-                while (reader.Read())
-                {
-                    Console.WriteLine(reader["libelle_polygone"]);
-                }
+                return reader.Read();
             }
-            this.connection.Close();
 
         }
     }

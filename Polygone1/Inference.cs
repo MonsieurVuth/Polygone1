@@ -30,9 +30,10 @@ namespace Polygone1
         public void CheckRegles()
         {
             Shape forme = new Shape(this);
+            BaseFait labase = new BaseFait(this);
             if(this.cote == "3")
             {
-                MessageBox.Show(forme.Triangle());
+                
             }
 
             if(this.cote == "4")

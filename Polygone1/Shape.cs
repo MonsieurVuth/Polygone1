@@ -69,13 +69,12 @@ namespace Polygone1
         public string FourSide()
         {
             string forme = String.Empty;
-
-                if(inference.Longueur == "4" && inference.Para == "4" && inference.Angle == "4")
+                if (inference.Longueur == "4" && inference.Para == "4" && inference.Angle == "4")
                 {
                     forme += " Carré";
                 }
 
-                if(inference.Longueur== "2" && inference.Para == "4" && inference.Angle == "4")
+                if (inference.Longueur == "2" && inference.Para == "4" && inference.Angle == "4")
                 {
                     forme += " Rectange";
                 }
@@ -84,15 +83,19 @@ namespace Polygone1
                 {
                     forme += " Losange";
                 }
-                if(this.inference.Longueur == "2" && this.inference.Para == "2" && this.inference.Angle == "0")
+                if (this.inference.Longueur == "2" && this.inference.Para == "2" && this.inference.Angle == "0")
                 {
                     forme += " Trapèze";
                 }
-                if(this.inference.Longueur == "4" && this.inference.Para == "4" && this.inference.Angle == "0")
+                if (this.inference.Longueur == "4" && this.inference.Para == "4" && this.inference.Angle == "0")
                 {
                     forme += " Parallèlogramme";
                 }
-                return forme;
+                if (this.inference.Para == "0")
+                {
+                forme += "Quadrilatère quelconque";
+                }
+            return forme;
         }
     }
 }
