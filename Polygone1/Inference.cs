@@ -33,7 +33,14 @@ namespace Polygone1
             BaseFait labase = new BaseFait(this);
             if(this.cote == "3")
             {
-                
+                if(labase.getShape() == string.Empty)
+                {
+                    labase.AddShape(forme.Triangle());
+                }
+                else
+                {
+                    MessageBox.Show(labase.getShape());
+                }
             }
 
             if(this.cote == "4")

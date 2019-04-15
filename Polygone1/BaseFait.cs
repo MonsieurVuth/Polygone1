@@ -41,21 +41,30 @@ namespace Polygone1
             command.Parameters.AddWithValue("@long", inference.Longueur);
             command.ExecuteNonQuery();
             this.connection.Close();
-            MessageBox.Show("Nouvelle forme insérée");
+            MessageBox.Show("Forme" + libelle + " inserée");
         }
 
-        public bool getShape()
+        public String getShape()
         {
             InitConnect();
             this.connection.Open();
-            String query = "SELECT * FROM caracteristiques";
+            string lib = "";
+            String query = "SELECT * FROM caracteristiques WHERE nbr_cote = @cote and nbr_angledroit = @angle and nbr_parallele = @para and nbr_memelongueur = @long";
             MySqlCommand command = new MySqlCommand(query, this.connection);
-            
+            command.Parameters.AddWithValue("@cote", inference.Cote);
+            command.Parameters.AddWithValue("@angle", inference.Angle);
+            command.Parameters.AddWithValue("@para", inference.Para);
+            command.Parameters.AddWithValue("@long", inference.Longueur);
             using (MySqlDataReader reader = command.ExecuteReader())
             {
-                return reader.Read();
+                if (reader.Read())
+                {
+                    lib = reader["libelle_polygone"].ToString();
+                }
+                reader.Close();
             }
-
+            this.connection.Close();
+            return lib;
         }
     }
 }
