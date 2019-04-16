@@ -18,7 +18,7 @@ namespace Polygone1
 
         public String Triangle()
         {
-            if ( this.inference.Para == "0" )
+            if ( this.inference.Para == "0" && Int32.Parse( this.inference.Angle) <= 1 )
             {
                 this.forme = " Triangle";
                 if(this.inference.Angle == "1")
@@ -27,46 +27,24 @@ namespace Polygone1
                 }
                 else
                 {
-                    if(Int32.Parse(this.inference.Angle) > 1)
-                    {
-                        MessageBox.Show("Impossible d'avoir plus q'un angle droit");
-                        return null;
-                    }
                     if (this.inference.Longueur == "2")
                     {
                         this.forme = " Triangle";
                         forme += " isocèle";
                     }
                     else
-                    {                   
-                            int result = Int32.Parse(this.inference.Longueur);
-                            if (result > Int32.Parse(this.inference.Cote))
-                            {
-                                MessageBox.Show("Impossible d'avoir plus de trois longueurs identiques");
-                                return null;
-                            }
-                            else
-                            {
-                                if (this.inference.Longueur == "0" && this.inference.Angle == "0")
-                                {
-                                    forme += " quelconque";
-
-                                }
-                                else
-                                {
-                                    if(this.inference.Longueur == "3" && this.inference.Angle == "0")
-                                    {
-                                        forme += " equilatéral";
-                                    }        
-                                }        
-                            }                        
+                    {
+                        if (this.inference.Longueur == "3" && this.inference.Angle == "0")
+                        {
+                            forme += " equilatéral";
+                        }                            
                     }
                 }
-            }
-            else
-            {
-                MessageBox.Show("Impossible d'avoir des cotés parralèle");
-                return null;
+                if (this.inference.Longueur == "0" && this.inference.Angle == "0")
+                {
+                    forme += " quelconque";
+
+                }
             }
             return forme;
         }

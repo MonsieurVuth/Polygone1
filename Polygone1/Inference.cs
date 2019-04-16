@@ -38,7 +38,11 @@ namespace Polygone1
                     if(forme.Triangle() != null)
                     {
                         labase.AddShape(forme.Triangle());
-                    }              
+                    }
+                    else
+                    {
+                        MessageBox.Show("Forme inconnue");
+                    }
                 }
                 else
                 {
@@ -56,14 +60,15 @@ namespace Polygone1
                     }
                     else
                     {
-                        MessageBox.Show("Erreur de paramètre pour une forme de quatre cotés");
+                        MessageBox.Show("Forme inconnue");
                     }         
                 }
                 else
                 {
-                    MessageBox.Show(labase.getShape());
+                    MessageBox.Show("La base de fait relève la forme : "+ labase.getShape());
                 }
             }
+
 
             if(this.cote == "5")
             {
@@ -75,14 +80,20 @@ namespace Polygone1
                     }
                     else
                     {
-                        MessageBox.Show("Erreur de paramètre pour tentative de pentagone");
+                        MessageBox.Show("Forme inconnue");
                     }
                 }
                 else
                 {
-                    MessageBox.Show(labase.getShape());
+                    MessageBox.Show("La base de fait relève la forme : " + labase.getShape());
                 }
             }
+        }
+
+        public void EmptyBase()
+        {
+            BaseFait labase = new BaseFait(this);
+            labase.DeleteBase();
         }
     }
 

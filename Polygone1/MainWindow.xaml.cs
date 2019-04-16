@@ -29,5 +29,11 @@ namespace Polygone1
             Inference inference = new Inference(side.Text, angle.Text, para.Text, longueur.Text);
             inference.CheckRegles();
         }
+
+        private void Delete_Click(object sender, RoutedEventArgs e)
+        {
+            Inference inference = new Inference(side.Text, angle.Text, para.Text, longueur.Text);
+            inference.EmptyBase();
+        }
     }
 }

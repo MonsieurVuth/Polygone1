@@ -41,7 +41,7 @@ namespace Polygone1
             command.Parameters.AddWithValue("@long", inference.Longueur);
             command.ExecuteNonQuery();
             this.connection.Close();
-            MessageBox.Show("Forme" + libelle + " inserée");
+            MessageBox.Show("Forme " + libelle + " inserée dans la base de fait");
         }
 
         public String getShape()
@@ -65,6 +65,17 @@ namespace Polygone1
             }
             this.connection.Close();
             return lib;
+        }
+
+        public void DeleteBase()
+        {
+            InitConnect();
+            this.connection.Open();
+            String query = "DELETE FROM caracteristiques";
+            MySqlCommand command = new MySqlCommand(query, this.connection);
+            command.ExecuteNonQuery();
+            this.connection.Close();
+            MessageBox.Show("Base vidée");
         }
     }
 }

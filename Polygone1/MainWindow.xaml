@@ -34,7 +34,8 @@
             <ComboBoxItem Content="3"/>
             <ComboBoxItem Content="4"/>
         </ComboBox>
-        <Button Content="VALIDER" HorizontalAlignment="Left" Margin="323,196,0,0" VerticalAlignment="Top" FontSize="15" Width="140" Height="41" Click="Button_Click"/>
+        <Button Content="RUN" HorizontalAlignment="Left" Margin="323,196,0,0" VerticalAlignment="Top" FontSize="15" Width="140" Height="41" Click="Button_Click"/>
         <Button Content="Button" HorizontalAlignment="Left" Height="2" Margin="863,271,-262,0" VerticalAlignment="Top" Width="8"/>
+        <Button x:Name="Delete" Content="DELETE" HorizontalAlignment="Left" Margin="36,196,0,0" VerticalAlignment="Top" Width="157" Height="41" FontSize="15" Click="Delete_Click"/>
     </Grid>
 </Window>
