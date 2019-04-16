@@ -77,13 +77,13 @@ namespace Polygone1
                     {
                         if (this.inference.Longueur == "4")
                         {
-                            forme += " Carré";
+                            forme = " Carré";
                         }
                         else
                         {
                             if (inference.Longueur == "2")
                             {
-                                forme += " Rectange";
+                                forme = " Rectange";
                             }
                         }
 
@@ -92,22 +92,33 @@ namespace Polygone1
                     {
                         if (this.inference.Angle == "0")
                         {
-                            forme += "Quadrilatère quelconque";
+                            forme = " Quadrilatère quelconque";
                             if (this.inference.Longueur == "4" && this.inference.Para == "4")
                             {
-                                forme += " Parallèlogramme";
+                                forme = " Parallèlogramme";
                             }
                             if (this.inference.Para == "2")
                             {
-                                forme += " Trapèze";
+                                forme = " Trapèze";
                             }
                             if (inference.Longueur == "4" && inference.Para == "4")
                             {
-                                forme += " Losange";
+                                forme = " Losange";
                             }
                         }
                     }            
             return forme;
+        }
+        public String Pentagone()
+        {
+            if(this.inference.Angle == "2" || this.inference.Angle == "0")
+            {
+                if(this.inference.Para == "2" || this.inference.Para == "0")
+                {
+                    this.forme = " Pentagone";
+                }
+            }
+            return this.forme;
         }
     }
 }

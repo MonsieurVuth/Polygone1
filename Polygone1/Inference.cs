@@ -56,8 +56,27 @@ namespace Polygone1
                     }
                     else
                     {
-                        MessageBox.Show("Erreur de paramètre");
+                        MessageBox.Show("Erreur de paramètre pour une forme de quatre cotés");
                     }         
+                }
+                else
+                {
+                    MessageBox.Show(labase.getShape());
+                }
+            }
+
+            if(this.cote == "5")
+            {
+                if(labase.getShape() == string.Empty)
+                {
+                    if(forme.Pentagone() != null)
+                    {
+                        labase.AddShape(forme.Pentagone());
+                    }
+                    else
+                    {
+                        MessageBox.Show("Erreur de paramètre pour tentative de pentagone");
+                    }
                 }
                 else
                 {
